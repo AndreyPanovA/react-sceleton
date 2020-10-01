@@ -4,15 +4,15 @@
  * Если браузером загружается результаты серверного рендера, то используется режим hydrate для
  * предотвращения начального перерендера, а также инициализируется состояние, переданное сервером.
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
-import store from '@store';
-import api, { ssr as ssrApi } from '@api';
-import navigation from '@app/navigation';
-import App from '@app';
-import config from 'config.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { Router } from "react-router-dom";
+import store from "@store";
+import api, { ssr as ssrApi } from "@api";
+import navigation from "@app/navigation";
+import App from "@app";
+import config from "config.js";
 
 window.SSR = {
   active: false,
@@ -43,6 +43,6 @@ window.SSR = {
         <App />
       </Router>
     </Provider>,
-    document.getElementById('app'),
+    document.getElementById("app")
   );
 })();

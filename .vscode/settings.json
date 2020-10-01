@@ -1,0 +1,12 @@
+{
+    "jumpToAliasFile.alias": {
+        "@api": "/Users/andreypanov/Desktop/react-sceleton/src/api",
+        "@app": "/Users/andreypanov/Desktop/react-sceleton/src/app",
+        "@components": "/Users/andreypanov/Desktop/react-sceleton/src/components",
+        "@containers": "/Users/andreypanov/Desktop/react-sceleton/src/containers",
+        "@store": "/Users/andreypanov/Desktop/react-sceleton/src/store",
+        "@theme": "/Users/andreypanov/Desktop/react-sceleton/src/theme",
+        "@utils": "/Users/andreypanov/Desktop/react-sceleton/src/utils"
+    },
+    "git.ignoreLimitWarning": true
+}
