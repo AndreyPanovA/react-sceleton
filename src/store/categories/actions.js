@@ -1,10 +1,10 @@
-import store from '@store';
-import * as api from '@api';
-import listToTree from '@utils/list-to-tree';
-import mc from 'merge-change';
+import store from "@store";
+import * as api from "@api";
+import listToTree from "@utils/list-to-tree";
+import mc from "merge-change";
 
 export const types = {
-  SET: Symbol('SET'),
+  SET: Symbol("SET"),
 };
 
 /**
@@ -31,14 +31,18 @@ const actions = {
    * @param params Параметры запроса
    * @returns {Promise<*>}
    */
-  load: async params => {
+  load: async (params) => {
     store.dispatch({ type: types.SET, payload: { wait: true, errors: null } });
     try {
       const response = await api.categories.getList(params);
       const result = response.data.result;
       store.dispatch({
         type: types.SET,
-        payload: mc.patch(result, { roots: listToTree(result.items), wait: false, errors: null }),
+        payload: mc.patch(result, {
+          roots: listToTree(result.items),
+          wait: false,
+          errors: null,
+        }),
       });
       return result;
     } catch (e) {
@@ -51,6 +55,17 @@ const actions = {
         throw e;
       }
     }
+  },
+  //
+  inline: async (data) => {
+    const response = await api.categories.update(data);
+    // const result = response.data.result;
+    console.log(response, "panov");
+
+    store.dispatch({
+      type: types.SET,
+      payload: { data },
+    });
   },
 };
 
