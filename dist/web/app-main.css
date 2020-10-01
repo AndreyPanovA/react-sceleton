@@ -1,0 +1,143 @@
+.LayoutHeader {
+  border-bottom: 1px solid #e8e8e8;
+  color: #ffffff;
+}
+.LayoutHeader__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+}
+.LayoutHeader__left {
+  text-align: left;
+}
+.LayoutHeader__center {
+  text-align: center;
+}
+.LayoutHeader__right {
+  text-align: right;
+}
+
+.MenuTop__list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+.MenuTop__item {
+  position: relative;
+}
+.MenuTop__item:not(:last-of-type) {
+  margin-right: 22px;
+}
+.MenuTop__item_active a {
+  font-weight: 700;
+}
+.MenuTop__link {
+  font-size: 14px;
+  font-weight: 300;
+  color: #0a61a3;
+}
+
+.Logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+.Logo_hover,
+.Logo:hover {
+  text-decoration: none;
+  outline: none;
+}
+.Logo_focus,
+.Logo:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.Accordion {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.Accordion__header {
+  background: #e8e8e8;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+.Accordion__title {
+  font-weight: 700;
+}
+.Accordion__collapse {
+  display: none;
+}
+.Accordion__collapse_open {
+  display: block;
+}
+.Accordion__body {
+  padding: 8px 10px;
+}
+.Accordion_disabled,
+.Accordion:disabled,
+.Accordion[disabled] {
+  opacity: 0.65;
+}
+
+.shad {
+  -webkit-box-shadow: 0px -1px 10px 1px #89ebbf;
+  -moz-box-shadow: 0px -1px 10px 1px #89ebbf;
+  box-shadow: 0px -1px 10px 1px #89ebbf;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8-VQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirk-VQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rg-VQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rs-VQ.ttf) format('truetype');
+}
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font: 16px/20px normal Arial, sans-serif;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+body a {
+  color: #333;
+  text-decoration: none;
+}
+

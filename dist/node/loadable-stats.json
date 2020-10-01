@@ -1,0 +1,963 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.1",
+  "hash": "5c486f07be81170c7905",
+  "publicPath": "",
+  "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+  "assetsByChunkName": {
+    "app-catalog~app-catalog-editor": [
+      "app-catalog~app-catalog-editor.css",
+      "app-catalog~app-catalog-editor.js"
+    ],
+    "app-about": [
+      "app-about.css",
+      "app-about.js"
+    ],
+    "app-catalog": "app-catalog.js",
+    "app-catalog-editor": [
+      "app-catalog-editor.css",
+      "app-catalog-editor.js"
+    ],
+    "app-login": [
+      "app-login.css",
+      "app-login.js"
+    ],
+    "app-main": [
+      "app-main.css",
+      "app-main.js"
+    ],
+    "app-not-found": "app-not-found.js",
+    "app-private": [
+      "app-private.css",
+      "app-private.js"
+    ],
+    "main": [
+      "main.css",
+      "main.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "app-about.css",
+      "size": 878,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "app-about"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-about.js",
+      "size": 8215,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "app-about"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-catalog-editor.css",
+      "size": 3573,
+      "chunks": [
+        3
+      ],
+      "chunkNames": [
+        "app-catalog-editor"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-catalog-editor.js",
+      "size": 1513,
+      "chunks": [
+        3
+      ],
+      "chunkNames": [
+        "app-catalog-editor"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-catalog.js",
+      "size": 878,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "app-catalog"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-catalog~app-catalog-editor.css",
+      "size": 878,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "app-catalog~app-catalog-editor"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-catalog~app-catalog-editor.js",
+      "size": 15143,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "app-catalog~app-catalog-editor"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-login.css",
+      "size": 2291,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "app-login"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-login.js",
+      "size": 16428,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "app-login"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-main.css",
+      "size": 3029,
+      "chunks": [
+        5
+      ],
+      "chunkNames": [
+        "app-main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-main.js",
+      "size": 10487,
+      "chunks": [
+        5
+      ],
+      "chunkNames": [
+        "app-main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-not-found.js",
+      "size": 2737,
+      "chunks": [
+        6
+      ],
+      "chunkNames": [
+        "app-not-found"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-private.css",
+      "size": 878,
+      "chunks": [
+        7
+      ],
+      "chunkNames": [
+        "app-private"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "app-private.js",
+      "size": 8506,
+      "chunks": [
+        7
+      ],
+      "chunkNames": [
+        "app-private"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "assets/5fe38509f0f2adcf9573fc56800ff3c6.png",
+      "size": 17292,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "assets/9e6b49b5db2fac3bb180a839356cd5fb.png",
+      "size": 23151,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "assets/f1866e4b964b85a6c9fca6339444e8aa.png",
+      "size": 14507,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "main.css",
+      "size": 4116,
+      "chunks": [
+        8
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "main.js",
+      "size": 341621,
+      "chunks": [
+        8
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        8
+      ],
+      "assets": [
+        "main.css",
+        "main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        8
+      ],
+      "assets": [
+        "main.css",
+        "main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-main": {
+      "chunks": [
+        5
+      ],
+      "assets": [
+        "app-main.css",
+        "app-main.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-login": {
+      "chunks": [
+        4
+      ],
+      "assets": [
+        "app-login.css",
+        "app-login.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-about": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "app-about.css",
+        "app-about.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-catalog": {
+      "chunks": [
+        0,
+        2
+      ],
+      "assets": [
+        "app-catalog~app-catalog-editor.css",
+        "app-catalog~app-catalog-editor.js",
+        "app-catalog.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-catalog-editor": {
+      "chunks": [
+        0,
+        3
+      ],
+      "assets": [
+        "app-catalog~app-catalog-editor.css",
+        "app-catalog~app-catalog-editor.js",
+        "app-catalog-editor.css",
+        "app-catalog-editor.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-private": {
+      "chunks": [
+        7
+      ],
+      "assets": [
+        "app-private.css",
+        "app-private.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "app-not-found": {
+      "chunks": [
+        6
+      ],
+      "assets": [
+        "app-not-found.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!app/catalog-editor/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/elements/accordion/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/elements/button/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/elements/error/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/elements/input/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/elements/logo/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/forms/form-login/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/layouts/layout-content/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/layouts/layout-field/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/layouts/layout-header/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/layouts/layout-modal/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/layouts/layout-page/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!components/menus/menu-top/style.less"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "/Users/andreypanov/Desktop/react-sceleton/dist/node",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin ../node_modules/css-loader/dist/cjs.js??ref--6-1!../node_modules/less-loader/dist/cjs.js??ref--6-2!theme/style.less"
+    }
+  ]
+}

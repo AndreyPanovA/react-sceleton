@@ -1,0 +1,57 @@
+.LayoutHeader {
+  border-bottom: 1px solid #e8e8e8;
+  color: #ffffff;
+}
+.LayoutHeader__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+}
+.LayoutHeader__left {
+  text-align: left;
+}
+.LayoutHeader__center {
+  text-align: center;
+}
+.LayoutHeader__right {
+  text-align: right;
+}
+
+.MenuTop__list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+.MenuTop__item {
+  position: relative;
+}
+.MenuTop__item:not(:last-of-type) {
+  margin-right: 22px;
+}
+.MenuTop__item_active a {
+  font-weight: 700;
+}
+.MenuTop__link {
+  font-size: 14px;
+  font-weight: 300;
+  color: #0a61a3;
+}
+
+.Logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+.Logo_hover,
+.Logo:hover {
+  text-decoration: none;
+  outline: none;
+}
+.Logo_focus,
+.Logo:focus {
+  text-decoration: none;
+  outline: none;
+}
+
