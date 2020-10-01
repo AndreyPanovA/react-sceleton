@@ -12,7 +12,8 @@
     "build:analize": "cross-env NODE_ENV=production BUILD_ANALYZE=true webpack",
     "test": "jest",
     "test:eslint": "./node_modules/.bin/eslint ./",
-    "storybook": "cross-env NODE_ENV=development start-storybook -p 9030 -c .storybook"
+    "storybook": "cross-env NODE_ENV=development start-storybook -p 9030 -c .storybook",
+    "heroku-postbuild": "npm run build"
   },
   "private": true,
   "author": "Vladimir Shestakov boolive@yandex.ru",
