@@ -15,7 +15,7 @@
     "storybook": "cross-env NODE_ENV=development start-storybook -p 9030 -c .storybook",
     "heroku-postbuild": "npm run start:ssr"
   },
-  "private": true,
+  "private": false,
   "author": "Vladimir Shestakov boolive@yandex.ru",
   "license": "ISC",
   "dependencies": {
