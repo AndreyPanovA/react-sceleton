@@ -13,7 +13,7 @@
     "test": "jest",
     "test:eslint": "./node_modules/.bin/eslint ./",
     "storybook": "cross-env NODE_ENV=development start-storybook -p 9030 -c .storybook",
-    "heroku-postbuild": "npm run start:ssr"
+    "heroku-postbuild": "npm run build"
   },
   "private": false,
   "author": "Vladimir Shestakov boolive@yandex.ru",
