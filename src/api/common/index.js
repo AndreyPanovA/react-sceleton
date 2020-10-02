@@ -1,11 +1,11 @@
-import params from '@utils/query-params';
+import params from "@utils/query-params";
 
 class Common {
   /**
    * @param http {AxiosInstance} Экземпляр библиотеки axios
    * @param path {String} Путь в url по умолчанию
    */
-  constructor(http, path = 'common') {
+  constructor(http, path = "common") {
     this.http = http;
     this.path = path;
   }
@@ -20,7 +20,14 @@ class Common {
    * @param other {Object} Другие параметры апи
    * @returns {Promise}
    */
-  getList({ search, fields = 'items(*),count', limit = 20, skip = 0, path = undefined, ...other }) {
+  getList({
+    search,
+    fields = "items(*),count",
+    limit = 20,
+    skip = 0,
+    path = undefined,
+    ...other
+  }) {
     return this.http.get(`/api/v1/${path || this.path}`, {
       params: params({ search, fields, limit, skip, ...other }),
     });
@@ -34,7 +41,7 @@ class Common {
    * @param other {Object} Другие параметры апи
    * @returns {Promise}
    */
-  getOne({ id, fields = '*', path = undefined, ...other }) {
+  getOne({ id, fields = "*", path = undefined, ...other }) {
     return this.http.get(`/api/v1/${path || this.path}/${id}`, {
       params: params({ fields, ...other }),
     });
@@ -48,7 +55,7 @@ class Common {
    * @param other {Object} Другие параметры апи
    * @returns {Promise}
    */
-  create({ data, fields = '*', path = undefined, ...other }) {
+  create({ data, fields = "*", path = undefined, ...other }) {
     return this.http.post(`/api/v1/${path || this.path}`, data, {
       params: params({ fields, ...other }),
     });
@@ -63,7 +70,7 @@ class Common {
    * @param other {Object} Другие параметры апи
    * @returns {Promise}
    */
-  update({ id, data, fields = '*', path = undefined, ...other }) {
+  update({ id, data, fields = "*", path = undefined, ...other }) {
     return this.http.put(`/api/v1/${path || this.path}/${id}`, data, {
       params: params({ fields, ...other }),
     });
@@ -77,7 +84,7 @@ class Common {
    * @param other {Object} Другие параметры апи
    * @returns {Promise}
    */
-  delete({ id, fields = '*', path = undefined, ...other }) {
+  delete({ id, fields = "*", path = undefined, ...other }) {
     return this.http.delete(`/api/v1/${path || this.path}/${id}`, {
       params: params({ fields, ...other }),
     });
