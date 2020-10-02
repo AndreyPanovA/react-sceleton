@@ -59,13 +59,18 @@ const actions = {
   //
   inline: async (data) => {
     const response = await api.categories.update(data);
-    // const result = response.data.result;
-    console.log(response, "panov");
 
-    store.dispatch({
-      type: types.SET,
-      payload: { data },
-    });
+    try {
+      store.dispatch({
+        type: types.SET,
+        payload: { data },
+      });
+
+      // код ...
+    } catch (err) {
+      //
+      // обработка ошибки
+    }
   },
 };
 
