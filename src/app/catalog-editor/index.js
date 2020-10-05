@@ -6,8 +6,6 @@ import HeaderContainer from "@containers/header-container";
 import LayoutPage from "@components/layouts/layout-page";
 import CategoryTree from "@containers/category-tree";
 import useInit from "@utils/hooks/use-init";
-// import "./style.less";
-// import "../../theme/style.less";
 import Waves from "@components/waves";
 
 const СatalogEditor = (props) => {

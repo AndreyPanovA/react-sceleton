@@ -15,7 +15,6 @@
 }
 
 .globalFonts(@size) {
-  // font-size: @size;
   -webkit-font-smoothing: antialiased;
   color: #333;
   font-family: "Open Sans", sans-serif;
@@ -25,8 +24,16 @@
   }
 }
 
-.shad {
-  -webkit-box-shadow: 0px -1px 10px 1px #89ebbf;
-  -moz-box-shadow: 0px -1px 10px 1px #89ebbf;
-  box-shadow: 0px -1px 10px 1px #89ebbf;
+.awsomeContainer(@color:white,@align:center, @border: 2px ) {
+  .shad(#89ebbf);
+  color: @color;
+  border: @border solid white;
+  text-align: @align;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.shad(@color:#89ebbf) {
+  -webkit-box-shadow: 0px -1px 10px 1px @color;
+  -moz-box-shadow: 0px -1px 10px 1px @color;
+  box-shadow: 0px -1px 10px 1px @color;
 }
