@@ -1,14 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classes from './style.less';
-import themes from '@utils/themes';
-import cn from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classes from "./style.less";
+import themes from "@utils/themes";
+import cn from "classnames";
 
-function LayoutPage (props) {
+function LayoutPage(props) {
   return (
-    <div className={themes('LayoutPage', props.theme)}>
+    <div className={themes("LayoutPage", props.theme)}>
       <div className="LayoutPage__header">{props.header}</div>
-      <div className="LayoutPage__content">{props.children || props.content}</div>
+      <div className="LayoutPage__content">
+        {props.children || props.content}
+      </div>
       <div className="LayoutPage__footer">{props.footer}</div>
     </div>
   );
@@ -23,7 +25,7 @@ LayoutPage.propTypes = {
 };
 
 LayoutPage.defaultProps = {
-  theme: ''
-}
+  theme: "",
+};
 
 export default React.memo(LayoutPage);

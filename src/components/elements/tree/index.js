@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.less";
 const Tree = React.memo((props) => {
   if (props.items && props.items.length) {
     return (

@@ -6,7 +6,6 @@ import HeaderContainer from "@containers/header-container";
 import LayoutContent from "@components/layouts/layout-content";
 import Button from "@components/elements/button";
 import Accordion from "@components/elements/accordion";
-import "../../theme/style.less";
 
 function Main() {
   const callbacks = {

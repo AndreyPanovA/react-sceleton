@@ -28,7 +28,6 @@ const CategoryTree = ssrPlaceholder((props) => {
       });
     }),
   };
-
   const renderItem = (item) => {
     return props.edit ? (
       <div
