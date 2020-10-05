@@ -1,4 +1,7 @@
-.LayoutPage{
+@import "../../../theme/mixins.less";
+@prevColor: #eee;
+
+.LayoutPage {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -10,15 +13,15 @@
     }
   }
 
-  &__header{
-    background: #eee;
+  &__header {
+    .headerLineView(#333);
   }
 
-  &__content{
+  &__content {
     flex: 1;
   }
 
-  &__footer{
+  &__footer {
     background: #eee;
   }
 }

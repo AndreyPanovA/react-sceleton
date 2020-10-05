@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 import articles from "@store/articles/actions";
 import categories from "@store/categories/actions";
 import LayoutContent from "@components/layouts/layout-content";
 import HeaderContainer from "@containers/header-container";
 import LayoutPage from "@components/layouts/layout-page";
-import ArticleList from "@containers/article-list";
 import CategoryTree from "@containers/category-tree";
 import useInit from "@utils/hooks/use-init";
+import "./style.less";
+import "../../theme/style.less";
+import Waves from "@components/waves";
 
-function Catalog(props) {
+const СatalogEditor = (props) => {
   const categoryId = props.match.params.categoryId;
-
   useInit(async () => {
     await articles.init({ categoryId });
   }, [categoryId]);
@@ -19,17 +19,16 @@ function Catalog(props) {
   useInit(async () => {
     await categories.load({ fields: "*", limit: 1000 });
   });
-
   return (
     <LayoutPage header={<HeaderContainer />}>
       <LayoutContent>
-        <h1>Каталог</h1>
-        <CategoryTree />
+        <h1>Каталог с возможностью редактирования</h1>
+        <CategoryTree edit="true" />
+        <Waves />
         <hr />
-        <ArticleList />
       </LayoutContent>
     </LayoutPage>
   );
-}
+};
 
-export default React.memo(Catalog);
+export default React.memo(СatalogEditor);

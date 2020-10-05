@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-/**
+/***
  * Хук для асинхронных расчётов, которые будут исполнены первом рендере или изменнии inputs.
  * Так же вызывается при SSR. Если callback асинхронный, то ожидается его исполнение перед
  * серверным рендером.
@@ -9,7 +9,12 @@ import { useEffect } from 'react';
  * @param onBackForward {Boolean}
  * @param force {Boolean} В любом случаи исполнять
  */
-export default function useInit(callback, inputs = [], onBackForward = false, force = false) {
+export default function useInit(
+  callback,
+  inputs = [],
+  onBackForward = false,
+  force = false
+) {
   if (process.env.IS_NODE && SSR.firstRender) {
     // При серверном рендере исполняем один раз
     const promise = callback(true);
@@ -23,9 +28,9 @@ export default function useInit(callback, inputs = [], onBackForward = false, fo
         callback(false);
       }
       if (onBackForward) {
-        window.addEventListener('popstate', callback);
+        window.addEventListener("popstate", callback);
         return () => {
-          window.removeEventListener('popstate', callback);
+          window.removeEventListener("popstate", callback);
         };
       }
     }, inputs);

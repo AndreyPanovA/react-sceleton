@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import { withRouter } from 'react-router-dom';
-import session from '@store/session/actions';
-import detectActive from '@utils/detect-active';
-import LayoutHeader from '@components/layouts/layout-header';
-import MenuTop from '@components/menus/menu-top';
-import Button from '@components/elements/button';
-import Logo from '@components/elements/logo';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { withRouter } from "react-router-dom";
+import session from "@store/session/actions";
+import detectActive from "@utils/detect-active";
+import LayoutHeader from "@components/layouts/layout-header";
+import MenuTop from "@components/menus/menu-top";
+import Button from "@components/elements/button";
+import Logo from "@components/elements/logo";
 
 class HeaderContainer extends Component {
   static propTypes = {
@@ -24,12 +24,13 @@ class HeaderContainer extends Component {
     this.state = {
       items: detectActive(
         [
-          { title: 'Главная', to: '/', active: false },
-          { title: 'О нас', to: '/about', active: false },
-          { title: 'Каталог', to: '/catalog', active: false },
-          { title: 'Админка', to: '/private', active: false },
+          { title: "Главная", to: "/", active: false },
+          { title: "О нас", to: "/about", active: false },
+          { title: "Каталог", to: "/catalog", active: false },
+          { title: "Редактор каталога", to: "/catalog-editor", active: false },
+          { title: "Админка", to: "/private", active: false },
         ],
-        props.location,
+        props.location
       ),
     };
   }
@@ -46,7 +47,7 @@ class HeaderContainer extends Component {
   }
 
   onClickLogin = () => {
-    this.props.history.push('/login');
+    this.props.history.push("/login");
   };
 
   onClickLogout = () => {
@@ -59,15 +60,23 @@ class HeaderContainer extends Component {
 
     if (session.exists) {
       items.push(
-        <Button key={1} theme={['clear-white', 'margins']} onClick={this.onClickLogout}>
+        <Button
+          key={1}
+          theme={["clear-white", "margins"]}
+          onClick={this.onClickLogout}
+        >
           Выход
-        </Button>,
+        </Button>
       );
     } else {
       items.push(
-        <Button key={1} theme={['clear-white', 'margins']} onClick={this.onClickLogin}>
+        <Button
+          key={1}
+          theme={["clear-white", "margins"]}
+          onClick={this.onClickLogin}
+        >
           Вход
-        </Button>,
+        </Button>
       );
     }
     return items;
@@ -77,14 +86,18 @@ class HeaderContainer extends Component {
     const { items } = this.state;
 
     return (
-      <LayoutHeader left={<Logo />} right={this.renderRight()} center={<MenuTop items={items} />} />
+      <LayoutHeader
+        left={<Logo />}
+        right={this.renderRight()}
+        center={<MenuTop items={items} />}
+      />
     );
   }
 }
 
 export default compose(
   withRouter,
-  connect(state => ({
+  connect((state) => ({
     session: state.session,
-  })),
+  }))
 )(HeaderContainer);

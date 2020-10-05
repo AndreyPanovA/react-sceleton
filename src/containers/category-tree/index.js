@@ -1,34 +1,52 @@
-import React from 'react';
-import useSelectorMap from '@utils/hooks/use-selector-map';
-import { Link } from 'react-router-dom';
-import Tree from '@components/elements/tree';
-import ssrPlaceholder from '@utils/ssr-placeholder';
-// import { DatePicker } from 'antd';
+import React, { useRef, useState, useMemo } from "react";
+import useSelectorMap from "@utils/hooks/use-selector-map";
+import { Link } from "react-router-dom";
+import Tree from "@components/elements/tree";
+import ssrPlaceholder from "@utils/ssr-placeholder";
+import categories from "@store/categories/actions";
 
-const CategoryTree = ssrPlaceholder(
-  // WEB
-  props => {
-    const select = useSelectorMap(state => ({
-      //items: state.categories.items,
-      roots: state.categories.roots,
-      wait: state.categories.wait,
-    }));
-
-    if (select.wait) {
-      return <div>{select.wait && <i>Загрузка...</i>}</div>;
-    } else {
-      return (
-        <Tree
-          items={select.roots}
-          renderItem={item => <Link to={`/catalog/${item._id}`}>{item.title}</Link>}
-        />
-      );
-    }
-  },
-  // SSR
-  props => {
-    return <div>Здесь будет меню!!!</div>;
-  },
-);
+const CategoryTree = ssrPlaceholder((props) => {
+  const initialState = useMemo(() => ({
+    id: "",
+    lang: "ru",
+    data: { title: "" },
+  }));
+  const [state, setState] = useState(initialState);
+  const select = useSelectorMap((state) => ({
+    roots: state.categories.roots,
+    wait: state.categories.wait,
+  }));
+  const setValue = async ({ target: { textContent: text } }, item) => {
+    setState((prev) => {
+      const newState = { ...prev, id: item._id, data: { title: text } };
+      categories.inline(newState);
+      return newState;
+    });
+  };
+  const closeEditing = (event) => event.key === "Enter" && event.target.blur();
+  const renderItem = (item) => {
+    return props.edit ? (
+      <div
+        id={item._id}
+        value={item.title}
+        contentEditable="true"
+        suppressContentEditableWarning={true}
+        onInput={(e) => {
+          setValue(e, item);
+        }}
+        onKeyPress={closeEditing}
+      >
+        {state.text ? state.text : item.title}
+      </div>
+    ) : (
+      <Link to={`/catalog/${item._id + "1"}`}>{item.title}</Link>
+    );
+  };
+  return select.wait ? (
+    <div>{select.wait && <i>Загрузка...</i>}</div>
+  ) : (
+    <Tree items={select.roots} renderItem={renderItem} />
+  );
+});
 
 export default React.memo(CategoryTree);

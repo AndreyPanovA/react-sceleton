@@ -1,16 +1,17 @@
-import React, { useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import modal from '@store/modal/actions';
-import LayoutPage from '@components/layouts/layout-page';
-import HeaderContainer from '@containers/header-container';
-import LayoutContent from '@components/layouts/layout-content';
-import Button from '@components/elements/button';
-import Accordion from '@components/elements/accordion';
+import React, { useCallback } from "react";
+import { Link } from "react-router-dom";
+import modal from "@store/modal/actions";
+import LayoutPage from "@components/layouts/layout-page";
+import HeaderContainer from "@containers/header-container";
+import LayoutContent from "@components/layouts/layout-content";
+import Button from "@components/elements/button";
+import Accordion from "@components/elements/accordion";
+import "../../theme/style.less";
 
 function Main() {
   const callbacks = {
     showInfo: useCallback(async () => {
-      const result = await modal.open('info', {
+      const result = await modal.open("info", {
         overflowTransparent: false,
         overflowClose: true,
       });
@@ -27,7 +28,7 @@ function Main() {
         <p>
           <Button onClick={callbacks.showInfo}>Показать модалку</Button>
         </p>
-        <Accordion title={'Заголовок'}>
+        <Accordion title={"Заголовок"}>
           text for accordion, with other components, ex. <Button>Button</Button>
         </Accordion>
       </LayoutContent>

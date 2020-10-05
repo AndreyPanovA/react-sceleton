@@ -1,32 +1,33 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-process.env.TARGET = process.env.TARGET || 'web';
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
+process.env.TARGET = process.env.TARGET || "web";
 
 console.log(`TARGET: ${process.env.TARGET}`);
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 
-const isProduction = process.env.NODE_ENV === 'production';
-const isDevelopment = process.env.NODE_ENV === 'development';
-const isWeb = process.env.TARGET === 'web';
-const isNode = process.env.TARGET === 'node';
+const isProduction = process.env.NODE_ENV === "production";
+const isDevelopment = process.env.NODE_ENV === "development";
+const isWeb = process.env.TARGET === "web";
+const isNode = process.env.TARGET === "node";
 const target = process.env.TARGET;
 
-const appConfig = require('./src/config.js');
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const TerserJSPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const nodeExternals = require('webpack-node-externals');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const appConfig = require("./src/config.js");
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
+const TerserJSPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const nodeExternals = require("webpack-node-externals");
+const ProgressBarPlugin = require("progress-bar-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 // For SSR
-const LoadablePlugin = require('@loadable/webpack-plugin');
+const LoadablePlugin = require("@loadable/webpack-plugin");
 
 // Aliases for IDE from package.json
-const packageConfig = require('./package.json');
+const packageConfig = require("./package.json");
 let alias = {};
 if (packageConfig._moduleAliases) {
   const keys = Object.keys(packageConfig._moduleAliases);
@@ -39,31 +40,31 @@ let config = {
   name: target,
   target: target,
   mode: process.env.NODE_ENV, // https://webpack.js.org/configuration/mode/
-  context: path.join(__dirname, '/src'),
+  context: path.join(__dirname, "/src"),
   entry: [`index.${target}.js`],
   output: {
-    path: path.join(__dirname, 'dist', target),
-    filename: '[name].js', //'[name]-bundle-[chunkhash:8].js'
+    path: path.join(__dirname, "dist", target),
+    filename: "[name].js", //'[name]-bundle-[chunkhash:8].js'
     // publicPath: `/dist/${target}/`,
     // pathinfo: true
-    libraryTarget: isNode ? 'commonjs2' : undefined,
+    libraryTarget: isNode ? "commonjs2" : undefined,
   },
   plugins: [
     new ProgressBarPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
         TARGET: JSON.stringify(process.env.TARGET),
-        IS_WEB: process.env.TARGET === 'web',
-        IS_NODE: process.env.TARGET === 'node',
+        IS_WEB: process.env.TARGET === "web",
+        IS_NODE: process.env.TARGET === "node",
       },
     }),
     new LoadablePlugin(),
     new MiniCssExtractPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    extensions: [".js", ".jsx"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
     alias,
   },
   module: {
@@ -71,41 +72,55 @@ let config = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }],
+        use: [{ loader: "babel-loader" }],
       },
       {
         test: /\.css$/,
         use: [
-          { loader: MiniCssExtractPlugin.loader, options: { hmr: isDevelopment, reloadAll: true } },
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { hmr: isDevelopment, reloadAll: true },
+          },
           //{ loader: 'style-loader' },
-          { loader: 'css-loader', options: { url: true, import: true } },
+          { loader: "css-loader", options: { url: true, import: true } },
         ],
       },
       {
         test: /\.less$/,
         use: [
-          { loader: MiniCssExtractPlugin.loader, options: { hmr: isDevelopment, reloadAll: true } },
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { hmr: isDevelopment, reloadAll: true },
+          },
           //{ loader: 'style-loader' },
-          { loader: 'css-loader', options: { url: true, import: true } },
-          { loader: 'less-loader', options: { lessOptions: {} } },
+          { loader: "css-loader", options: { url: true, import: true } },
+          { loader: "less-loader", options: { lessOptions: {} } },
         ],
       },
       {
         test: /\.(svg|png|swf|jpg|otf|eot|ttf|woff|woff2)(\?.*)?$/,
-        use: [{ loader: 'url-loader', options: { limit: 1000, name: 'assets/[hash].[ext]' } }],
+        use: [
+          {
+            loader: "url-loader",
+            options: { limit: 1000, name: "assets/[hash].[ext]" },
+          },
+        ],
       },
       {
         test: /\.jsx\.svg$/,
         use: [
-          { loader: 'babel-loader' },
-          { loader: 'react-svg-loader', options: { jsx: true /*true outputs JSX tags*/ } },
+          { loader: "babel-loader" },
+          {
+            loader: "react-svg-loader",
+            options: { jsx: true /*true outputs JSX tags*/ },
+          },
         ],
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader',
+            loader: "html-loader",
             options: {
               minimize: {
                 removeComments: false,
@@ -137,11 +152,11 @@ let config = {
 if (isWeb) {
   config.plugins.push(
     new HtmlWebPackPlugin({
-      template: './index.html',
-      filename: './index.html',
-      title: 'App',
+      template: "./index.html",
+      filename: "./index.html",
+      title: "App",
       base: appConfig.navigation.basename,
-    }),
+    })
   );
 }
 // if (isNode) {
@@ -152,11 +167,11 @@ if (isProduction) {
 }
 
 if (isDevelopment && isWeb) {
-  config.devtool = 'inline-source-map'; // "#cheap-module-inline-source-map";
+  config.devtool = "inline-source-map"; // "#cheap-module-inline-source-map";
   config.plugins.push(new webpack.HotModuleReplacementPlugin());
   config.devServer = {
     //compress: false,
-    contentBase: path.join(__dirname, 'dist', target),
+    contentBase: path.join(__dirname, "dist", target),
     port: appConfig.dev.port,
     publicPath: config.output.publicPath,
     hot: true,
