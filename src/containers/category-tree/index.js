@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, useCallback } from "react";
 import useSelectorMap from "@utils/hooks/use-selector-map";
 import { Link } from "react-router-dom";
 import Tree from "@components/elements/tree";
@@ -16,14 +16,19 @@ const CategoryTree = ssrPlaceholder((props) => {
     roots: state.categories.roots,
     wait: state.categories.wait,
   }));
-  const setValue = async ({ target: { textContent: text } }, item) => {
-    setState((prev) => {
-      const newState = { ...prev, id: item._id, data: { title: text } };
-      categories.inline(newState);
-      return newState;
-    });
+  const callbacks = {
+    onKeyPress: useCallback(
+      (event) => event.key === "Enter" && event.target.blur()
+    ),
+    onInput: useCallback(async ({ target: { textContent: text } }, item) => {
+      setState((prev) => {
+        const newState = { ...prev, id: item._id, data: { title: text } };
+        categories.inline(newState);
+        return newState;
+      });
+    }),
   };
-  const closeEditing = (event) => event.key === "Enter" && event.target.blur();
+
   const renderItem = (item) => {
     return props.edit ? (
       <div
@@ -31,10 +36,8 @@ const CategoryTree = ssrPlaceholder((props) => {
         value={item.title}
         contentEditable="true"
         suppressContentEditableWarning={true}
-        onInput={(e) => {
-          setValue(e, item);
-        }}
-        onKeyPress={closeEditing}
+        onInput={(e) => callbacks.onInput(e, item)}
+        onKeyPress={callbacks.onKeyPress}
       >
         {state.text ? state.text : item.title}
       </div>

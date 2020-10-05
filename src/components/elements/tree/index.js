@@ -1,7 +1,6 @@
 import React from "react";
-// contenteditable="true"
+
 const Tree = React.memo((props) => {
-  console.log(props);
   if (props.items && props.items.length) {
     return (
       <ul className={"Tree"}>
